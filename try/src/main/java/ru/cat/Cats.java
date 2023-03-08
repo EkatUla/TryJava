@@ -3,22 +3,29 @@ package ru.cat;
 public class Cats {
 
     final int eatForCat = 70;
+
+    final int waterForCat = 50;
     String name;
     int age;
     int weigh;
     int hunger;
     int thirst;
-    static int count = 0;
+    static int countCats = 0;
+
 
 
     static void meow(){
         System.out.println("meow");
     }
 
-    void whatToEatFromPlate(Plate plate){
+    void EatFromPlate(Plate plateWithFood){
         System.out.println("Хочу кушать из тарелки");
-        plate.DecreaseEat(eatForCat);
+        plateWithFood.DecreaseEat(eatForCat);
+    }
 
+    void DrinkFromBowl(Bowl bowlWithWater){
+        System.out.println("Хочу пить");
+        bowlWithWater.DecreaseWater(waterForCat);
     }
 
 
@@ -28,7 +35,7 @@ public class Cats {
         this.weigh = weigh;
         this.hunger = hunger;
         this.thirst = thirst;
-        count++;
+        countCats++;
 
     }
 }

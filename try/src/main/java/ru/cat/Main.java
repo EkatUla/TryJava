@@ -7,18 +7,23 @@ public class Main {
 
         Plate plate = new Plate(2500);
 
+
         System.out.println(cat.name);
         //System.out.println(cat.count);
         System.out.println(cat2.name);
         //System.out.println(cat2.count);
-        System.out.println("Количество кошек сейчас - " + Cats.count);
+        System.out.println("Количество кошек сейчас - " + Cats.countCats);
         Cats.meow();
 
-        cat.whatToEatFromPlate(plate);
-        cat2.whatToEatFromPlate(plate);
+        cat.EatFromPlate(plate);
+        cat2.EatFromPlate(plate);
 
         System.out.println(plate.countEat);
 
+        Bowl bowl = new Bowl(1000);
+        System.out.println(bowl.countWater);
+        cat.DrinkFromBowl(bowl);
+        System.out.println(bowl.countWater);
 
     }
 }

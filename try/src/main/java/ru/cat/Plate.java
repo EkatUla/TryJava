@@ -4,12 +4,12 @@ public class Plate {
     int countEat;   // сколько еды осталось в тарелке
 
 
-    void DecreaseEat(int eatFood){
-        countEat = countEat - eatFood;
+    void DecreaseEat(int oneTimeEat){
+        countEat = countEat - oneTimeEat;
     }
 
-    public Plate(int countEat) {
-        this.countEat = countEat;
+    public Plate(int quantityFood) {
+        this.countEat = quantityFood;
     }
 
 

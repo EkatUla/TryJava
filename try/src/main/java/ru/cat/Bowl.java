@@ -1,10 +1,15 @@
 package ru.cat;
 
 public class Bowl {
-    int water = 1000;
     int countWater = 0;
 
-    void DecreaseWater(){
 
+    void DecreaseWater(int oneTimeDrink) {
+        countWater = countWater - oneTimeDrink;
+    }
+
+
+    public Bowl(int quantityWater) {
+        this.countWater = quantityWater;
     }
 }
